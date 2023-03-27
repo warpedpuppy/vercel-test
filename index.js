@@ -19,13 +19,18 @@ app.use(
     },
   })
 );
-app.post('/users', (req, res) => {
-	res.send('success')
+app.post('/', (req, res) => {
+	res.json({success: 'success'})
 })
 
-
+app.put('/', (req, res) => {
+	res.send({success: 'success'})
+})
+app.delete('/', (req, res) => {
+	res.send({success: 'success'})
+})
 app.get('/', (req, res) => {
-	res.send('success')
+	res.send({success: 'success'})
 })
 
 app.listen(8080, () => console.log('success'))
